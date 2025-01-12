@@ -5,8 +5,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * La classe principale qui orchestre l'analyse des logs et l'affichage des résultats.
+ */
 public class LogAnalyzer {
 
+    /**
+     * Le point d'entrée de l'application. Lit un fichier log, analyse les logs, filtre par type,
+     * puis affiche les résultats et les statistiques.
+     *
+     * @param args Les arguments de ligne de commande (non utilisés ici).
+     */
     public static void main(String[] args) {
         String filePath = Objects.requireNonNull(LogAnalyzer.class.getResource("/Sample.log")).getPath(); // Exemple de fichier log
 
