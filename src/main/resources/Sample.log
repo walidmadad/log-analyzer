@@ -1,0 +1,9 @@
+[2025-01-12 10:23:45] [INFO] Server started successfully.
+[2025-01-12 10:24:12] [WARNING] High memory usage detected.
+[2025-01-12 10:25:07] [ERROR] Failed to connect to database.
+[2025-01-12 10:26:33] [INFO] User login: username=admin.
+[2025-01-12 10:27:14] [DEBUG] Query execution time: 45ms.
+[2025-01-12 10:27:56] [ERROR] Timeout while accessing external API.
+[2025-01-12 10:28:45] [INFO] Scheduled task completed.
+[2025-01-12 10:29:15] [WARNING] Disk space running low on /dev/sda1.
+[2025-01-12 10:30:00] [INFO] Server shutdown initiated.
