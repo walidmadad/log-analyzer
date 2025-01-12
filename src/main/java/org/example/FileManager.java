@@ -8,7 +8,7 @@ import java.util.List;
 
 public class FileManager {
     public static List<String> readLogFile(String filePath) throws IOException {
-        try(BufferedReader br = new BufferedReader(new FileReader(filePath));) {
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             List<String> logs = new ArrayList<>();
             String line;
             while((line = br.readLine()) != null){
