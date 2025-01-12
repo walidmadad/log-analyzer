@@ -1,21 +1,21 @@
 package org.example;
 
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class LogParser {
     private static final Pattern logPattern = Pattern.compile("\\[(.*?)\\] \\[(.*?)\\] (.*)");
-}
 
-class LogEntry{
-    private final String date, type, message;
-
-    public LogEntry(String date, String type, String message){
-        this.date = date;
-        this.type = type;
-        this.message = message;
+    public static LogEntry parseLogLine(String logLine){
+        Matcher matcher = logPattern.matcher(logLine);
+        if(matcher.matches()){
+            String date = matcher.group(1);
+            String type = matcher.group(2);
+            String message = matcher.group(3);
+            return new LogEntry(date, type, message);
+        }
+        return null;
     }
-
-    public String getType(){return type;}
-    public String getDate(){return date;}
-    public String getMessage(){return message;}
 }
+
+record LogEntry(String date, String type, String message){ }
