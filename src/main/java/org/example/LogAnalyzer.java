@@ -26,7 +26,7 @@ public class LogAnalyzer {
             // Parser les logs en objets LogEntry
             List<LogEntry> logs = logLines.stream()
                     .map(LogParser::parseLogLine)
-                    .filter(log -> log != null)
+                    .filter(Objects::nonNull)
                     .toList();
 
             // Afficher tous les logs
